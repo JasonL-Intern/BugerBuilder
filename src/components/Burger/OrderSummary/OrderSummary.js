@@ -3,19 +3,19 @@ import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
-componentWillUpdate(){
-    console.log('summary will update')
-}
+    componentWillUpdate() {
+        console.log('summary will update')
+    }
 
     render() {
 
         const ingredientSummary = Object.keys(this.props.ingredients)
-        .map(igKey => {
-            return (
-                <li key={igKey}>
-                    <span style={{ textTransform: 'capitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}
-                </li>);
-        });
+            .map(igKey => {
+                return (
+                    <li key={igKey}>
+                        <span style={{ textTransform: 'capitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}
+                    </li>);
+            });
 
         return (
             <Aux>
